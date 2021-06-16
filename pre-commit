@@ -1,0 +1,13 @@
+#!/bin/sh
+
+regex='@company\.com$'
+email=$GIT_AUTHOR_EMAIL
+
+if [[ $email =~ $regex ]];
+then
+     echo "Your Email Satisfies Git Policy"
+	 exit 0
+else 
+     echo "Your Email $email doesn't satisfy Git Policy"
+	 exit 1
+fi 
